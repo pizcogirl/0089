@@ -29,4 +29,21 @@ public class AgendaTelefonica
     {
         agenda.put(name, number);
     }
+    
+    /**
+     * Busca el telefono de un contacto introduciendo el nombre y lo imprime por pantalla
+     * @param name El nombre del contacto
+     */
+    public void lookupNumber(String name)
+    {
+        String texto = agenda.get(name);
+        if (texto != null)
+        {
+            System.out.println("El número de " + name + " es " + texto);
+        }
+        else
+        {
+            System.out.println("El nombre introducido no existe en la agenda");
+        }
+    }
 }
